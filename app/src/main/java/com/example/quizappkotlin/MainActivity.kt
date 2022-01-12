@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
                 et_name.setError("This field can't be blank")
             }else{
                 val i = Intent(this, Questions_Activity::class.java)
+                i.putExtra(constants.USER_NAME,et_name.text.toString())
                 startActivity(i)
                 finish()
             }
